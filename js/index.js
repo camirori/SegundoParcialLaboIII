@@ -487,19 +487,6 @@ window.onload = function () {
     var tabla1 = new Dom.Tabla('tabla1', Database.Control.data, form1, ['marca', 'modelo', 'precio']);
     //Database abm
     Database.Control.cargarTabla(tabla1); //en la fx armarGrilla indicar los elementos q no se muestran
-    function promesa(tabla) {
-        return new Promise(function (resolve, reject) {
-            Dom.spinner('mostrar');
-            setTimeout(function () {
-                console.log('3 segundos');
-                var rdo = Database.Control.save(tabla);
-                if (rdo)
-                    resolve();
-                else
-                    reject();
-            }, 3000);
-        });
-    }
     document.getElementById("btnGuardar").addEventListener("click", function () {
         Database.Control.save(tabla1);
     });
