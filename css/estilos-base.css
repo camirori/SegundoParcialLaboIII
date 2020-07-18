@@ -1,0 +1,274 @@
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fixed{
+  display: block;
+  position: fixed;
+  top: 20%;             /*centro de la pantalla*/
+  /*bottom: 50%;*/      /*si indico solo la posición de botton la parte de arriba puede quedar fuera de la pantalla*/
+  right: 25%;
+  box-shadow: 19px 10px 20px 0px rgba(0,0,0,0.36);
+}
+
+
+
+/*Contenedor*****************************************************************/
+.contenedor{
+  width: 50%;
+  border-radius: 5px;
+  background-color: rgb(168, 211, 167);
+  padding: 20px;
+}
+
+
+
+/*Boton  <button class="boton">*****************************************************/
+.boton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center; 
+  font-size: 16px;
+  margin: 4px 2px;
+  /*width: 50%;*/                     /*By default, the size of the button is determined by its text content*/
+  cursor: pointer;
+  border-radius:5px;
+  text-decoration: none;
+  /*display: inline-block;*/
+  /*border: 2px solid #4CAF50;*/      /*to add a colored border to a button*/
+  transition-duration: 0.4s;
+}
+.boton:hover {
+  background-color: rgb(17, 134, 20); 
+  color: white;
+}
+
+.botonRojo{
+background-color: rgb(218, 18, 18);
+}
+.botonRojo:hover{
+background-color: rgb(163, 10, 10)
+}
+
+.botonX{
+background-color: rgb(223, 12, 40);
+border: 1px solid black;
+color: white;
+padding: 5px 10px;
+text-align: center; 
+font-size: 16px;
+margin: 4px 2px;
+border-radius:5px;
+text-decoration: none;
+transition-duration: 0.4s;
+float: right;
+}
+.botonX:hover {
+background-color: rgb(136, 5, 22);
+}
+
+
+
+/* Tablas ******************************************************/
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+th,td{
+  text-align: left;
+  padding: 8px;
+}
+th{
+  background-color: rgb(48, 110, 40);
+  color: white;
+}
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+
+/*forms******************************************************/
+select,input[type=text],[type=date],[type=number] {
+  width: 100%;
+  padding: 5px 8px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  /*border: 2px solid gray;*/
+  border-radius: 4px;
+}
+select:focus,input[type=text]:focus,[type=date]:focus,[type=date]:focus {
+  border: 1px solid #555;
+  /*outline: none;*/          /*some browsers will add a blue outline around the input when it gets focus (clicked on)*/
+}
+
+input.sinError, select.sinError{
+  border: 1px solid rgb(24, 0, 0);
+}
+input.error, select.error{
+  border: 1px solid red;
+}
+
+select:disabled  {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 8px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;                   /*to prevent textareas from being resized (disable the "grabber" in the bottom right corner)*/
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  margin: 4px 2px;
+  width: 30%;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
+  background-color: #45a049;
+}
+
+input[type=button].botonRojo, input[type=submit].botonRojo, input[type=reset].botonRojo{
+background-color: rgb(218, 18, 18);
+}
+input[type=button].botonRojo:hover, input[type=submit].botonRojo:hover, input[type=reset].botonRojo:hover{
+background-color: rgb(163, 10, 10);
+}
+
+
+
+
+/* Menú/ Navigation Bar (list of links) **************************************************/
+
+ul.navBar {			/* remove the bullets and the margins and padding from the list*/
+    list-style-type: none;          /*Removes the bullets*/
+    margin: 0;
+    padding: 0;
+    width: 25%;       /*100%*/
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    border: 1px solid #e7e7e7;
+    position: fixed; 		            /* Make it stick, even on scroll */
+    /*overflow: auto;*/         /*or hidden. Enable scrolling if the sidenav has too much content */
+}
+/*horizontal*/
+li.vNavBar a {
+  display: block;		            /*makes the whole link area clickable (not just the text) and it allows to specify the width*/
+  width: 100%;                      /*can also set the width of <ul>, and remove the width of <a>*/
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  box-sizing: border-box;
+}
+li.vNavBar a:hover {
+  background-color: rgb(17, 134, 20); /* Green */
+  color: white;
+}
+
+/*vertical*/
+li.hNavBar{
+    float: left;                /*to get block elements to slide next to each other*/
+    
+}
+li.hNavBar a {            /*todos los a dentro de li.nNavBar*/
+    display: block;
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    /*background-color: #dddddd*/;      /*Add the background-color to <ul> instead of each <a> element if you want a full-width background color*/
+    box-sizing: border-box;
+    width: 100%; 
+}
+li.hNavBar a:hover {		                /* Change the link color on hover */
+    background-color: rgb(17, 134, 20);
+    color: white;
+}
+.active {                               /*to let the user know which page he/she is on*/
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+
+
+
+/*Tooltip   <div class="tooltip"><span class="tooltiptext">text</></>*************************************************************/
+.tooltip {	/* Tooltip container */
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; 	/* If you want dots under the hoverable text */
+  }
+.tooltip .tooltiptext {		/* Tooltip text */
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;	  /* Position the tooltip text */
+    z-index: 1;
+  }
+.tooltip:hover .tooltiptext {	/* Show the tooltip text when you mouse over the tooltip container */
+    visibility: visible;
+  }
+  
+
+
+
+
+
+/*spinner <div class="spinner"></div>**********************************************************/
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background-color: rgba(0,0,0,0.5);  Black background with opacity */
+  background-color: #272626;
+  opacity: 0.5;   /*si se usa RGBA color values no se hereda la transparencia*/
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  /*cursor: pointer;  Add a pointer on hover */
+
+}
+.spinner {
+  border: 16px solid #d8efff; 
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: block;   /*al cargar el html setear en none*/
+  position: fixed;
+  bottom: 50%;    /*centro de la pantalla*/
+  right: 52%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+

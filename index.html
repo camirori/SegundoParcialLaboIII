@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/index.js" ></script>
+    <link rel="stylesheet" type="text/css" href="./css/estilos-base.css">
+
+</head>
+<body>
+
+    <div class="overlay" id="spinnerCntr"><div class="spinner" id="spinner"></div></div>
+
+    <h2>Lista de vehiculos</h2>
+    <button class="boton" id="btnShow" style="float: right;">Agregar Elemento</button>
+
+    <div class="contenedor" id="cntrCampos">
+        <label for="inputCampos">Campos a mostrar:</label><br/>
+        <input type="checkbox" name="id" value="id" id="checkId" checked />Id
+        <input type="checkbox" name="marca" value="marca" id="checkMarca" checked/>Marca
+        <input type="checkbox" name="modelo" value="modelo" id="checkModelo" checked/>Modelo
+        <input type="checkbox" name="precio" value="precio" id="checkPrecio" checked/>Precio
+    </div> 
+    <div class="contenedor" id="cntrInfo">
+        <label >Promedio precio:</label><br/>
+        <label id=promedioPrecio></label><br/>
+    </div> 
+    <div class="contenedor" id="cntrTipoAMostrar">
+        <label for="inputCampos">Tipo de vehiculo:</label><br/>
+        <input type="checkbox" name="auto" value="auto" id="checkAuto" checked />Auto
+        <input type="checkbox" name="camioneta" value="camioneta" id="checkCamioneta" checked />Camioneta
+    </div> 
+
+
+    <table id="tabla1">
+    </table>
+
+
+
+    <div class="contenedor fixed" id="cntrForm">
+        <button class="botonX" id="btnX">x</button><br/> 
+        
+        <label for="inputTipo">Tipo de vehiculo</label><br/>
+        <select name="tipo" id="inputTipo" size="1">
+            <option value="auto" selected >Auto</option>
+            <option value="camioneta" >Camioneta</option>
+        </select><br/>
+
+
+        <div style="display: none;" id="cntrFormAuto">
+            <label for="inputId" >ID</label><br/>
+            <input type="number" name="id" id="inputId" class="disabled"><br/>
+
+            <label for="inputMarca">Marca</label><br/>
+            <input type="text" name="marca" id="inputMarca"><br/>
+
+            <label for="inputModelo">Modelo</label><br/>
+            <input type="text" name="modelo" id="inputModelo"><br/>
+
+            <label for="inputPrecio">Precio</label><br/>
+            <input type="number" name="precio" id="inputPrecio"><br/>
+
+            <label for="inputCantidad">Cantidad de puertas</label><br/>
+            <input type="number" name="cantidadPuertas" id="inputCantidad"><br/>
+            
+        </div> 
+
+        <div style="display: none;" id="cntrFormCamioneta">
+            <label for="inputId">ID</label><br/>
+            <input type="number" name="id" id="inputId" class="disabled"><br/>
+
+            <label for="inputMarca">Marca</label><br/>
+            <input type="text" name="marca" id="inputMarca"><br/>
+
+            <label for="inputModelo">Modelo</label><br/>
+            <input type="text" name="modelo" id="inputModelo"><br/>
+
+            <label for="inputPrecio">Precio</label><br/>
+            <input type="number" name="precio" id="inputPrecio"><br/>
+
+            <label for="inputcuatroXcuatro">4x4</label><br/>
+            <input type="radio" name="cuatroXcuatro" value="1" checked/>Si<br/>
+            <input type="radio" name="cuatroXcuatro" value="0"/>No<br/>
+            
+        </div> 
+
+        <input type="button" value="Guardar" id="btnGuardar">
+        <input type="button" value="Modificar" id="btnModificar">
+        <input type="button" value="Eliminar" id="btnEliminar" class="botonRojo">
+    </div> 
+
+<!--     <h2>Lista de personas</h2>
+    <table id="tabla1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody id="tCuerpo">
+            <tr>			
+                <td>abc</td>	
+                <td></td>
+                <td></td>
+            </tr> 
+            <tr>			
+                <td>abc</td>	
+                <td></td>
+                <td></td>
+            </tr>  
+            <tr>			
+                <td>abc</td>	
+                <td></td>
+                <td></td>
+            </tr>           
+        </tbody>
+    </table> -->
+
+
+
+</body>
+</html>
